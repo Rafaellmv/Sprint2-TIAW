@@ -3,6 +3,13 @@ class UserController{
       this.addEventBtns();
   }
   
+     addLine(user){
+     }
+  
+  register(){
+    let formE1 = document.querySelector('.register');
+    console.log(formE1.elements)
+  }
   
   addEventBtns(){
     document.querySelector('.add').addEventListener('click',()=>{
