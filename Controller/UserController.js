@@ -5,6 +5,8 @@ class UserController{
   }
   
      addLine(user){
+       let tr = document.creatElement('tr');
+       tr.innerHTML = 
      }
   
      readPhoto(data){
@@ -52,7 +54,9 @@ class UserController{
       },(e)=>{
       
       })
-  }   
+  }
+     this.addLine(user)
+ }   
   
   addEventBtns(){
     document.querySelector('.add').addEventListener('click',()=>{
