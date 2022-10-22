@@ -32,17 +32,27 @@ class UserController{
           registerData.admin = v.checked
           breack;
         case 'file':
-          this.readPhoto(v.files[0])  
+            
         default:
           registerData[v.name] = v.value
           breack;
     })
     if(JSON.stringify(this.users) == JSON.stringify({})){
-      user = new User(0,elements.name.value,elements.photo.value,elements.email.value,elements.phone.value,elements.age.value,elements.admin.value,elements.password.value,elements.date.value)
+      user = new User(0,registerData.name,' ',registerData.photo,registerData.email,registerData.phone,registerData.age,registerData.admin,registerData.password,registerData.date)
     }else{
       let lastUser = Object.values({'a':'teste','b':'teste2'})[Object.values({'a':'teste','b':'teste2'}).length-1];
-      user = new User(lastUser.getId()+1,elements.name.value,elements.photo.value,elements.email.value,elements.phone.value,elements.age.value,elements.admin.value,elements.password.value,elements.date.value)  
-    }
+      user = new User(lastUser.getId()+1,registerData.name,' ',registerData.photo,registerData.email,registerData.phone,registerData.age,registerData.admin,registerData.password,registerData.date) 
+     }
+      let fileE1 = elements.photo;
+      if(fileE1.files.length == 0{
+         user.setPhoto('img/icon1.jpg');
+     }else{
+      this.readPhoto(fileE1.files[0]).then((result)=>{ 
+        user.setPhoto(result)
+      },(e)=>{
+      
+      })
+  }   
   
   addEventBtns(){
     document.querySelector('.add').addEventListener('click',()=>{
