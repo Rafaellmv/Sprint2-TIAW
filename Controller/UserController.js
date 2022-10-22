@@ -11,7 +11,7 @@ class UserController{
     let formE1 = document.querySelector('.register');
     let elements = formE1.elements;
     let user;
-    if(this.users == {}){
+    if(JSON.stringify(this.users) == JSON.stringify({})){
       user = new User(0,elements.name.value,elements.photo.value,elements.email.value,elements.phone.value,elements.age.value,elements.admin.value,elements.password.value,elements.date.value)
     }else{
       let lastUser = Object.values({'a':'teste','b':'teste2'})[Object.values({'a':'teste','b':'teste2'}).length-1];
