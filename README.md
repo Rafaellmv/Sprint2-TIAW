@@ -1,4 +1,4 @@
-# http://sprint2.tiawio
+# http://sprint2.tiaw.io
 
 - Rafael Lucca Marques Vasconcelos -
 - Procura de rolê -
